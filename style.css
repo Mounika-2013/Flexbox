@@ -55,13 +55,6 @@ img {
 
 }
 
-@media (max-width: 300px) {
-    main {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
 button {
     color: white;
     background-color: blue;
@@ -129,4 +122,69 @@ h12 {
 
 .para {
     z-index: 50%;
+}
+
+.nav-check {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.line {
+    display: block;
+    width: 30px;
+    background-color: black;
+    height: 2px;
+    border-radius: 100px;
+    transition: all 0.5s ease-out;
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width:503px) and (min-width:320px) {
+    .Home {
+        display: none;
+    }
+
+    .hamburger {
+        display: inline;
+        width: 30px;
+        background-color: #000;
+        height: 3px;
+        border-radius: 200px;
+        transition: all 0.5s ease-out;
+    }
+
+    #container {
+        margin-top: 10px;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    button {
+        font-size: 20px;
+        height: 50px;
+
+    }
+
+    section {
+        flex-direction: column-reverse;
+    }
+
+    .projects {
+        display: none;
+    }
+
+    footer {
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
 }
